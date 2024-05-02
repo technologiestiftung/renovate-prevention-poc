@@ -8,5 +8,8 @@
   },
   "keywords": [],
   "author": "ff6347 <hash@ff6347.email>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "1.0.7"
+  }
 }
