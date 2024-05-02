@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 jobs:
   test-allow:
     if: contains('["raphael-arce","ff6347"]', github.actor)
