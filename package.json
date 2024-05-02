@@ -10,6 +10,7 @@
   "author": "ff6347 <hash@ff6347.email>",
   "license": "MIT",
   "dependencies": {
+    "eslint": "1.10.3",
     "express": "1.0.7"
   }
 }
