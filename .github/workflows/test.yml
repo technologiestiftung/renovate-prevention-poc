@@ -12,7 +12,7 @@ jobs:
       - name: test it
         run: echo "Hello, ${{ github.actor }}"
   test-deny:
-    if: github.actor != "ff6347"
+    if: github.actor != 'ff6347'
     runs-on: ubuntu-latest
     steps:
       - name: test it
