@@ -1,0 +1,19 @@
+name: testing action restrictions
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  test-allow:
+    if: contains('["raphael-arce","ff6347"]', github.actor)
+    runs-on: ubuntu-latest
+    steps:
+      - name: test it
+        run: echo "Hello, ${{ github.actor }}"
+  test-deny:
+    if: github.actor != "ff6347"
+    runs-on: ubuntu-latest
+    steps:
+      - name: test it
+        run: echo "Hello, ${{ github.actor }}"
