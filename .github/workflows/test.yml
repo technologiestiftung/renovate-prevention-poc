@@ -9,13 +9,17 @@ on:
       - main
 jobs:
   test-allow:
+    # The below line restricts this test to be run by
+    # only the users raphael-arce and ff6347
     if: contains('["raphael-arce","ff6347"]', github.actor)
     runs-on: ubuntu-latest
     steps:
       - name: test it
         run: echo "Hello, ${{ github.actor }}"
   test-deny:
-    if: github.actor != 'ff6347'
+    # The below line restricts this test to be run by
+    # all users except the renovate[bot]
+    if: github.actor != 'renovate[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: test it
